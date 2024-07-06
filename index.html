@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+	<link rel="import" href="./src/templates/dashboard.html" />
+
+  </head>
+  <body class="h-screen">
+
+    <img src="/Background.jpg" alt="Background" class="absolute inset-0 w-full h-full object-cover z-[-1]">
+
+    <!-- Il seguente è il blur dello sfondo  -->
+    <div class="absolute inset-0 w-full h-full object-cover backdrop-blur-sm"></div>
+	<div class="absolute -top-2 w-full h-16 bg-gradient-to-b from-black opacity-50 from-0% to-100% -mb-2"></div>
+
+
+    <div id="app" class="absolute z-10 flex flex-col w-screen h-screen">
+      	<header class="shrink-0 w-full text-center h-fit top-0 flex flex-row justify-center items-center mt-1 text-white">
+
+			<div class="w-full h-fit flex flex-row justify-center items-center">
+				<p id="Clock" class="text-xl mb-2" onload="showTime()"></p>
+				<div class="absolute right-0 mr-2">
+					<i id="bluetooth status" class="fa-brands fa-bluetooth-b ml-2 mr-2"></i>
+					<i id="battery" class="fa-solid fa-battery ml-2 mr-2"></i>
+					<i id="wifi" class="fa-solid fa-wifi ml-2 mr-2"></i>
+				</div>
+			</div>
+        
+      	</header>
+
+		<iframe id="content" src="/src/pages/dashboard.html" frameborder="0" class="grow absolute h-full w-full p-10 pb-28"></iframe>
+
+      	<footer class="shrink-0 w-full h-fit absolute bottom-0 flex flex-row justify-between pt-2 pb-2 pl-10 pr-10 bg-grayblue">
+        	<a data-toggle="dashboard" class="text-center p-2 text-white">
+        	  	<i class="fa-solid fa-grip text-2xl mb-2"></i>
+        	  	<p>Dashboard</p>
+        	</a>        
+        	<a href="" class="text-center p-2 text-gray-500">
+        	  	<i class="fa-solid fa-map-location-dot text-2xl mb-2"></i>
+        	  	<p>Navigation</p>
+        	</a>        
+        	<a href="" class="text-center p-2 text-gray-500">
+        	  	<i class="fa-solid fa-music text-2xl mb-2"></i>
+        	  	<p>Music</p>
+        	</a>        
+			<a href="" class="text-center p-2 text-gray-500">
+          		<i class="fa-brands fa-bluetooth-b text-2xl mb-2"></i>
+          		<p>Bluetooth</p>
+        	</a>        
+			<a href="" class="text-center p-2 text-gray-500">
+          		<i class="fa-solid fa-gear text-2xl mb-2"></i>
+          		<p>Settings</p>
+        	</a>        
+		</footer>
+	</div>
+	<script type="module" src="/src/main.ts">
+
+	</script>
+  	</body>
+</html>
