@@ -8,7 +8,7 @@ function showTime(): void {
     let format24: boolean = true;
     let showSeconds: boolean = false;
     
-    if (h == 0) {
+    if (h == 0 && format24 == false) {
         h = 12;
     }
     

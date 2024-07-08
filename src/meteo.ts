@@ -1,0 +1,40 @@
+const position = document.getElementById('Position')!;
+const temperature = document.getElementById('Temperature')!;
+const description = document.getElementById('Description')!;
+const humidity = document.getElementById('Humidity')!;
+const precipitation = document.getElementById('Precipitation')!;
+const wind = document.getElementById('Wind')!;
+
+function capitalizeFirstLetter(string) {
+    if (typeof string !== 'string' || string.length === 0) {
+      return '';
+    }
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
+async function getWeather() {
+    const city = 'Palermo';
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=646527f14f44766391172bb7f98e9210&units=metric&lang=it`;
+
+    try {
+      const response = await fetch(apiUrl);
+      if (!response.ok) {
+        throw new Error('Errore nella richiesta');
+      }
+      const data = await response.json();
+      displayWeather(data);
+    } catch (error) {
+      console.error('Errore:', error);
+    }
+  }
+  
+  function displayWeather(data: any) {
+    position.innerHTML = data.name + ", " + data.sys.country;
+    temperature.innerHTML = data.main.feels_like;
+    description.innerHTML = capitalizeFirstLetter(data.weather[0].description);
+    humidity.innerHTML = data.main.humidity;
+    precipitation.innerHTML = data.clouds.all; 
+    wind.innerHTML = data.wind.speed;
+  }
+
+getWeather();
