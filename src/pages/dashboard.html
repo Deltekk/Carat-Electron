@@ -8,39 +8,50 @@
     <!-- Info -->
         
     <div class="col-start-1 row-span-2 w-full h-full bg-grayblue rounded-xl p-2">
+        <img src="/Renault.png" class="w-full mt-5 mb-5">
         
-        <div class="grid grid-cols-2 grid-rows-2  w-full flex-row text-sm text-center gap-5 mb-5">
+        <div class="grid grid-cols-2 grid-rows-2  w-full flex-row text-sm md:text-lg lg:text-4xl text-center gap-5 mb-5">
             
-            <div class="col-start-1 row-start-1">
+
+            <div class="col-start-1 row-start-1 text-center">
                 <p id="autonomy" class="font-bold"> 127 <span class="font-thin">km</span></p>
-                <p>Autonomia</p>
+                <p class="font-light text-xs md:text-sm lg:text-base xl:text-lg">Autonomia</p>
             </div>    
             <div class="col-start-2 row-start-1">
                 <p id="average" class="font-bold"> 17 <span class="font-thin">km/l</span></p>
-                <p>Media</p>
+                <p class="font-extralight text-xs md:text-sm lg:text-base xl:text-lgv">Media</p>
             </div>    
         
             <div class="col-start-1 row-start-2">
                 <p id="instantaneous" class="font-bold"> 12 <span class="font-thin">km/l</span></p>
-                <p>Istantaneo</p>
+                <p class="font-extralight text-xs md:text-sm lg:text-base xl:text-lgv">Istantaneo</p>
             </div>  
             <div class="col-start-2 row-start-2">
                 <p id="consumed" class="font-bold"> 5 <span class="font-thin">l</span></p>
-                <p>Consumati</p>
+                <p class="font-extralight text-xs md:text-sm lg:text-base xl:text-lgv">Consumati</p>
             </div>  
             
         </div>
         
         
-        <div class="flex flex-row justify-around">
+        <div class="flex flex-row justify-around text-lg lg:text-4xl mt-5 lg:mt-20 mb-5 lg:mb-20">
             <div class="flex flex-row">
-                <p class="font-thin text-lg"><i class="fa-solid fa-dashboard"> <span id="speed" class="font-bold mr-2">120</span></i>km/h</p>
+                <p class="font-thin"><i class="fa-solid fa-dashboard"> <span id="speed" class="font-bold mr-2">120</span></i>km/h</p>
             </div>
             <div class="flex flex-row">
-                <p class="font-thin text-lg"><i class="fa-solid fa-temperature-2"> <span id="InsideTemp" class="font-bold">38</span></i>°</p>
+                <p class="font-thin "><i class="fa-solid fa-temperature-2"> <span id="InsideTemp" class="font-bold">38</span></i>°</p>
             </div>
         </div>
         
+        <div class="flex flex-row justify-evenly mt-10 text-base md:text-lg lg:text-4xl">
+            <div class="flex justify-center items-center rounded-full border-white bg-transparent hover:border-blue-400 hover:bg-blue-400 border-solid border-2 w-10 h-10 lg:w-20 lg:h-20 lg:p-5 transition-all duration-100">
+                <i class="fa-solid fa-snowflake"></i>
+            </div>
+            <div class="flex justify-center items-center rounded-full border-white bg-transparent hover:border-orange-400 hover:bg-orange-400 border-solid border-2 w-10 h-10 lg:w-20 lg:h-20 lg:p-5 text-center align-middle transition-all duration-100">
+                <i class="fa-solid fa-fire-alt"></i>
+            </div>
+        </div>
+
     </div>
 
     <!-- Parking -->
